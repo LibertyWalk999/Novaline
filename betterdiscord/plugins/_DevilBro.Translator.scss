@@ -1,0 +1,17 @@
+.theme-dark .translateButton_DhP9x8{
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    &:hover{
+        background-color: $ControlFillColorDisabled;
+        border-color: $ControlStrokeColorDefault;
+    }
+}
+
+.theme-dark .menu_dc52c6 .item__183e8{
+    &[id="message-translator-translate-message"]::before{
+        content: "\F2B7"; // LocaleLanguage
+    }
+}

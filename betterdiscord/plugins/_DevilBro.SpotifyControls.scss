@@ -1,0 +1,27 @@
+.theme-dark .container_6sXIoE.withTimeline_824fT_{
+    border-bottom: 0;
+    .song_tIdBpF{
+        @include TypeBody;
+        color: $TextFillColorPrimary;
+    }
+    .interpret_F93iqP{
+        @include TypeCaption;
+        color: $TextFillColorSecondary;
+    }
+    // Can't detect if Spotify is playing or not, so just use default icons by plugin
+    .contents_fb6220{
+        display: block !important; // Override plugin CSS
+    }
+}
+
+.theme-dark .container_6sXIoE.maximized_vv2Wr0.withTimeline_824fT_{
+    .button__4f306{
+        margin-left: 2px;
+        &[style="margin-right: 4px;"]{
+            margin-right: 0 !important; // Override plugin CSS
+        }
+        &[style="margin-left: 4px;"]{
+            margin-left: 2px !important; // Override plugin CSS
+        }
+    }
+}

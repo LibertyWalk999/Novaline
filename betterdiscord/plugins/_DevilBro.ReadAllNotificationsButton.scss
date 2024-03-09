@@ -1,0 +1,18 @@
+.theme-dark .listItem_fa7b36.frame_oXWS21{
+    &:active{
+        transform: none;
+    }
+    .childWrapper__01b9c{
+        background-color: transparent;
+        color: $TextFillColorSecondary;
+        font-size: 10px;
+        text-transform: capitalize;
+
+        &:hover{
+            background-color: $ControlFillColorDefault;
+        }
+    }
+    .innerFrame_8Hg64E::before {
+        display: none !important;
+    }
+}

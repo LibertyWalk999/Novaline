@@ -1,0 +1,13 @@
+.theme-dark .botTag_a52f38[style],
+.theme-dark .botTag__11e95[style]{
+    padding: 0 4px !important;
+    border-radius: 4px;
+    text-transform: none;
+
+    &::before{
+        content: unset !important;
+    }
+    span{
+        display: block !important;
+    }
+}

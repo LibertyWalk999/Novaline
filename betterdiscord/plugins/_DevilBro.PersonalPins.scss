@@ -1,0 +1,45 @@
+html[lang^="en-"].theme-dark .toolbar__88c63 .iconWrapper_af9215.cursorPointer_B3uwDA{
+    &::before{ // Annoyingly has no aria-label
+        content: "\E70B"; // Note
+    }
+}
+
+.theme-dark .popout_xwjvsX.messagesPopoutWrap_b3b384.themedPopout_1TrfdI{
+    // Tabs
+    .tabBar__2aa8e{
+        .tab_a8a066{
+            padding-left: 0;
+            padding-right: 0;
+            margin-right: 16px;
+            color: $TextFillColorPrimary;
+            border-radius: 0;
+            &:hover{
+                background-color: transparent;
+                color: $TextFillColorSecondary;
+            }
+
+            &.selected__5711d{
+                background-color: transparent;
+                color: $AccentTextFillColorPrimary;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $AccentLight3;
+                    border-radius: 2px;
+                }
+                &:hover{
+                    color: $TextFillColorSecondary;
+                }
+            }
+        }
+    }
+
+    // Sorting
+    .quickSelectLabel_cf5c1b{
+        @include TypeBody;
+        color: $TextFillColorPrimary;
+    }
+}

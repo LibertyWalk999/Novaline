@@ -1,0 +1,51 @@
+.theme-dark .invisible-typing-button{
+    width: 32px;
+    height: 32px;
+    margin: 6px 4px 0 0;
+    position: relative;
+    border: 1px solid transparent;
+    &:hover{
+        background-color: $ControlFillColorSecondary;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+    }
+    &::before{
+        content: "\E087";
+        top: 7px;
+        left: 6px;
+        position: absolute;
+        @include FontIconFluent;
+        color: $TextFillColorSecondary;
+        font-size: 18px;
+    }
+
+    // Fixes a bug where .disabled is always present regardless of state
+    &.enabled{
+        &::before{
+            color: $TextFillColorSecondary !important;
+        }
+        &::after{
+            background-color: transparent !important;
+        }
+    }
+
+    &.disabled{
+        &::before{
+            color: $SystemFillColorCritical;
+        }
+        &::after{
+            content: "";
+            width: 24px;
+            height: 2px;
+            top: 14px;
+            left: 3px;
+            position: absolute;
+            background-color: $SystemFillColorCritical;
+            transform: rotate(-45deg);
+        }
+    }
+
+    svg{
+        display: none;
+    }
+}

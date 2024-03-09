@@ -1,0 +1,14 @@
+.theme-dark #cui-toolbar-container{
+    .iconWrapper_af9215{
+        &.selected_be2668{
+            svg{
+                color: $TextOnAccentFillColorPrimary;
+            }
+        }
+
+        svg{
+            width: 18px;
+            display: block;
+        }
+    }
+}
