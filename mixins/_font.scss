@@ -1,0 +1,15 @@
+@mixin FontNormal{
+    font-family: var(--font-primary);
+}
+
+@mixin FontMonospace{
+    font-family: var(--font-code);
+}
+
+@mixin FontIconFluent{
+    font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets";
+}
+
+@mixin FontIconHoloLens{
+    font-family: "HoloLens MDL2 Assets";
+}

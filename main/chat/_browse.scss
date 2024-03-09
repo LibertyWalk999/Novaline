@@ -1,0 +1,63 @@
+// Channels & Roles
+.theme-dark .header__60bef {
+    background-color: transparent;
+    .iconWrapper_af9215{
+        display: none;
+    }
+}
+.theme-dark .content__1a4fe {
+    height: calc(100% - 1px);
+    padding: 0;
+    background-color: $LayerFillColorDefault;
+    border-top: 1px solid $CardStrokeColorDefault;
+    border-left: 1px solid $CardStrokeColorDefault;
+    border-radius: 8px 0 0 0;
+    &::before{
+        content: unset;
+    }
+
+    // Customise tab
+    // Customisation questions
+    .prompt__1b100{
+        background-color: $LayerFillColorDefault;
+        border-top: 1px solid $CardStrokeColorDefault;
+        border-left: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px 0 0 0;
+    }
+    // My profile
+    .profileCard_bd55ee{
+        background-color: $LayerFillColorDefault;
+        border-top: 1px solid $CardStrokeColorDefault;
+        border-left: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px 0 0 0;
+    }
+
+    // Browse channels
+    .channelRow__96673 {
+        background-color: $CardBackgroundFillColorDefault;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: $CardStrokeColorDefault;
+        &.firstChannel__94f31{
+            border-radius: 4px 4px 0 0;
+        }
+        &.lastChannel__129f1{
+            border-radius: 0 0 4px 4px;
+        }
+    }
+    .separator__3cfd2{
+        display: none;
+    }
+
+    // Fix for channel checkboxes not displaying
+    .channelActions__39164 .checkbox_c7f690{
+        display: block;
+    }
+
+    // Category row has some issues
+    .categoryRow_df4323{
+        .checkbox_c7f690{
+            display: block;
+        }
+    }
+}

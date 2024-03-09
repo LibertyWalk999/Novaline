@@ -1,0 +1,15 @@
+.theme-dark .wrapper_c727b6{
+    background-color: $ControlOnImageFillColorDefault;
+    border: 1px solid $ControlStrokeColorDefault;
+}
+
+html[lang^="en-"].theme-dark .wrapper_c727b6{
+    .button_d553e5[aria-label]{
+        &::before{
+            @include FontIconFluent;
+        }
+        svg{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.theme-dark .chat__52833 .search__07df0{
+    margin: 0 4px 0 0;
+    .searchBar_e0c60b{
+        width: 60px;
+        height: 32px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color $AnimationFadeInOut;
+        &:hover{
+            background-color: $ControlFillColorSecondary;
+            transition: background-color $AnimationFadeInOut;
+        }
+        .public-DraftEditorPlaceholder-root,
+        .icon__46425{
+            display: none;
+        }
+        .icon__46425{
+            margin-top: 2px;
+        }
+    }
+
+    // Icon when not active
+    .search_ac353c:not(.focused_ddee54):not(.open_d3ab4e)::before{
+        content: "\e721"; // Search
+        width: 60px;
+        font-size: 16px;
+        @include FontIconFluent;
+        text-align: center;
+        line-height: 32px;
+        vertical-align: middle;
+        position: absolute;
+    }
+
+    .search_ac353c.focused_ddee54 .searchBar_e0c60b,
+    .search_ac353c.open_d3ab4e .searchBar_e0c60b,
+    .search_ac353c.popout-open .searchBar_e0c60b{
+        width: 232px;
+        height: 32px;
+        margin: 0;
+        background-color: $ControlFillColorDefault;
+        background-image: none;
+        cursor: text;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-bottom-width: 2px;
+        border-radius: 4px;
+    }
+    .search_ac353c.focused_ddee54 .searchBar_e0c60b{
+        background-color: $ControlFillColorInputActiveBrush;
+        border-color: $ControlStrokeColorDefault;
+        border-bottom-color: $AccentBase;
+    }
+
+    .search_ac353c.open_d3ab4e .icon__46425,
+    .search_ac353c.focused_ddee54 .icon__46425,
+    .search_ac353c.open_d3ab4e .searchBar_e0c60b .public-DraftEditorPlaceholder-root,
+    .search_ac353c.focused_ddee54 .searchBar_e0c60b .public-DraftEditorPlaceholder-root{
+        display: block;
+    }
+    .search_ac353c .DraftEditor-root .DraftEditor-editorContainer{
+        height: 26px;
+    }
+    .search_ac353c .searchBar_e0c60b .DraftEditor-root{
+        width: 100%;
+        color: $TextFillColorPrimary;
+        @include TypeBody;
+        .public-DraftEditor-content{
+            overflow-x: hidden;
+        }
+        .public-DraftEditor-content,
+        .public-DraftEditorPlaceholder-root{
+            padding: 3px 8px 0;
+            box-sizing: border-box;
+        }
+    }
+    // Add margin to textarea when open/focused so text doesn't appear over the search/clear icon
+    .search_ac353c.open_d3ab4e .searchBar_e0c60b .DraftEditor-root,
+    .search_ac353c.focused_ddee54 .searchBar_e0c60b .DraftEditor-root{
+        margin-right: 32px;
+    }
+    .seasearch_ac353crch .searchBar_e0c60b .public-DraftEditorPlaceholder-root{
+        color: $TextFillColorSecondary;
+        @include TypeBody;
+    }
+
+    span[class^="searchAnswer-"],
+    span[class^="searchFilter-"]{
+        background-color: $TextFillColorPrimary;
+        color: #000;
+        font-weight: normal;
+    }
+
+    // Search/clear icon in textarea
+    .iconContainer__8fa9c{
+        // Flip eyeglass icon so the handle is the same side as the Fluent icon
+        &:first-child{
+            transform: rotateZ(90deg);
+        }
+    }
+}

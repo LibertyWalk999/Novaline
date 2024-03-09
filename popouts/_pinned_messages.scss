@@ -1,0 +1,42 @@
+.theme-dark .messagesPopoutWrap_b3b384{
+    max-height: calc(100vh - 32px - 48px - 12px) !important; // Fixes window jumping when alt-tabbed
+    background: $MicaBackgroundFillColorBase;
+    backdrop-filter: blur(16px);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px;
+
+    .header_f5cc88{
+        background-color: transparent;
+        box-shadow: none;
+        h1{
+            @include TypeBodyStrong;
+        }
+    }
+
+    .messagesPopout__22763 {
+        padding-top: 0;
+    }
+
+    // Empty
+    .emptyPlaceholder__688fc{
+        .image__0a0fc{
+            display: none;
+        }
+        .body__13cde{
+            white-space: unset;
+            @include TypeBody;
+        }
+    }
+
+    // Message
+    .messageGroupWrapper_f8c6e9{
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+    }
+
+    // Footer
+    .footer_a3029c{
+        display: none;
+    }
+}

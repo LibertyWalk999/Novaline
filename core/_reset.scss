@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Segoe UI";
+    src: local("Segoe UI") format("truetype"),
+         url("https://takosthings.github.io/Fluent-Discord-Fonts/segoeui.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe Fluent Icons";
+    src: local("Segoe Fluent Icons"),
+         url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
+}
+
+// Override Discord brand fronts
+:root{
+    --font-primary: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+    --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+    --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+*,
+::before,
+::after{
+    letter-spacing: normal;
+}

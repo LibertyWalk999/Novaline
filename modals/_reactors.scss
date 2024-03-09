@@ -1,0 +1,39 @@
+.theme-dark .container_dc03c3{
+    .scroller__5fda0{
+        background-color: $CardBackgroundFillColorDefault;
+    }
+
+    .reactionDefault__792ef{
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+        }
+    }
+    .reactionSelected__249a7{
+        position: relative;
+        background-color: $SubtleFillColorSecondary;
+        &::before{
+            content: "";
+            width: 3px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            background-color: $AccentFillColorDefault;
+            border-radius: 2px;
+        }
+    }
+
+    .reactors__20ab0{
+        background-color: transparent;
+    }
+
+    .name_eef59c{
+        @include TypeBody;
+        color: $TextFillColorPrimary;
+    }
+    .username__29f71{
+        opacity: 1;
+        @include TypeBody;
+        color: $TextFillColorSecondary;
+    }
+}

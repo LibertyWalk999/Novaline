@@ -1,0 +1,262 @@
+.theme-dark .guilds__2b93a{
+    width: 48px;
+    background-color: transparent;
+
+    // When a call is in fullscreen, set guilds width to 0
+    &.hidden__7c832{
+        width: 0;
+    }
+
+    .listItem_fa7b36{
+        margin: 0;
+        width: 48px;
+
+        // Hover state
+        &:hover .wrapper_d281dd::before,
+        .wrapper_d281dd.selected_f5ec8e::before{
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 4px;
+            left: 4px;
+            background-color: $ControlFillColorSecondary;
+            border-radius: 4px;
+            z-index: -1;
+        }
+        &:hover .wrapper_d281dd::before{
+            box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
+        }
+
+        // Pill
+        & > div[class^="pill_"]{
+            z-index: 1;
+            .item_f9d377{
+                width: 3px;
+                height: 16px !important;
+                margin-left: 4px;
+                background-color: $TextFillColorSecondary;
+                border-radius: 999px;
+                transform: none !important;
+
+                // Normal state
+                @for $i from 9 through 20{
+                    &[style*="height: #{$i}"]{
+                        background-color: $TextFillColorPrimary;
+                    }
+                }
+
+                // Selected
+                @for $i from 21 through 40{
+                    &[style*="height: #{$i}"]{
+                        background-color: $AccentFillColorDefault;
+                    }
+                }
+            }
+        }
+        // Guild icon
+        .wrapper__3af0b{
+            svg foreignObject{
+                mask: none;
+            }
+            .icon__0cbed{
+                width: var(--fluent-guilds-icon-size);
+                height: auto;
+                border-radius: 50%;
+            }
+            .acronym_cd4809{
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                color: $TextFillColorPrimary;
+                @include TypeBodyStrong;
+            }
+        }
+
+        // Home
+        .wrapper_d281dd{
+            &[data-list-item-id="guildsnav___home"]{
+                .childWrapper__01b9c{
+                    background-color: transparent;
+                    &::before{
+                        content: "\E80F"; // Home
+                        color: $TextFillColorPrimary;
+                        @include FontIconFluent;
+                        font-size: 16px;
+                    }
+                    svg{
+                        display: none !important; // Required to remove 'festive' Discord icon
+                    }
+                }
+            }
+        }
+        // Remove Home :active transform
+        .blobContainer__5ee50:active{
+            transform: none;
+        }
+
+        // Separator
+        .guildSeparator_dcb3cc{
+            display: none;
+        }
+        // Add server/Server Discovery icons
+        .circleIconButton_d8df29{
+            background-color: transparent;
+            color: #FFF;
+            &[aria-label]{
+                svg{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+        // Offline
+        .guildsError__8dc0a{
+            background-color: $SystemFillColorCritical;
+            border: 0;
+            border-radius: 0;
+            transition: none;
+            font-weight: 400;
+        }
+        //badge
+        .iconBadge_fdf33a{
+            background-color: $SystemFillColorSolidNeutral;
+            svg{
+                width: 12px;
+                height: 12px;
+                color: $TextOnAccentFillColorPrimary;
+            }
+        }
+        .lowerBadge__669e7,
+        .upperBadge_c7cfb3{
+            right: 6px;
+            transform: none !important; // Override inline
+        }
+        .upperBadge_c7cfb3{
+            top: 6px;
+        }
+        .lowerBadge__669e7{
+            bottom: 6px;
+            z-index: 1;
+        }
+        .numberBadge__50328{
+            background-color: $SystemFillColorCritical !important; // Override inline
+            @include TypeCaption;
+            color: $TextOnAccentFillColorPrimary;
+        }
+    }
+    // Folders
+    .wrapper_ed1dea{
+        .listItem_fa7b36{
+            .wrapper__3af0b{
+                svg{
+                    mask{
+                        display: none;
+                    }
+                }
+            }
+        }
+        // Fix folder container being too tall
+        ul[role="group"]{
+            height: auto !important; // Override inline
+        }
+
+        // Round bottom of last guild in folder
+        ul[id^="folder-items"] .listItem_fa7b36:last-of-type{
+            border-radius: 0 0 24px 24px;
+        }
+    }
+    .folder__17546{
+        background-color: transparent;
+        &:hover::before{
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 4px;
+            left: 4px;
+            box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
+            background-color: $ControlFillColorSecondary;
+            border-radius: 4px;
+            z-index: -1;
+        }
+    }
+    .folderIconWrapper__72239{
+        background-color: transparent !important; // Override inline
+        border-radius: 0;
+    }
+    .closedFolderIconWrapper__7321f{
+        padding: 8px;
+    }
+    .expandedFolderBackground__1bec6{
+        width: 40px;
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        background-color: $SubtleFillColorSecondary;
+        border-radius: 4px;
+        &.collapsed__0a270{
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+    .expandedFolderIconWrapper__458cf{
+        &::before{
+            content: "\F12B"; // FolderHorizontal
+            @include FontIconFluent;
+            position: absolute;
+            z-index: 1;
+            font-size: 23px;
+        }
+    }
+
+    // Connected to voice
+    .iconBadge_fdf33a.isCurrentUserConnected_d9734f{
+        background-color: $SystemFillColorSuccess;
+        &::before{
+            content: "\F0B9"; // Connected
+            @include FontIconFluent;
+            color: $TextOnAccentFillColorPrimary;
+            font-size: 10px;
+        }
+        svg{
+            display: none;
+        }
+    }
+
+    // Unread notification bars
+    .unreadMentionsIndicatorBottom_fdb943,
+    .unreadMentionsIndicatorTop_ada847{
+        width: 48px;
+        .bar_edc096{
+            background-color: $SystemFillColorCriticalBackground;
+        }
+        span{
+            font-size: 0;
+            &::before{
+                @include FontIconFluent;
+                color: $SystemFillColorCritical;
+                vertical-align: middle;
+                font-size: 16px;
+            }
+        }
+        &:hover span::before{
+            color: $TextFillColorSecondary;
+        }
+    }
+
+    .unreadMentionsIndicatorBottom_fdb943{
+        span{
+            &::before{
+                content: "\EDDC"; // CaretDownSolid8
+            }
+        }
+    }
+    .unreadMentionsIndicatorTop_ada847{
+        span{
+            &::before{
+                content: "\EDDB"; // CaretUpSolid8
+            }
+        }
+    }
+}

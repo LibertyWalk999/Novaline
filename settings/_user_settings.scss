@@ -1,0 +1,556 @@
+.theme-dark .contentColumn_dc7d36{
+    // Misc
+    .notice-1Qe0b_{
+        background-color: $SystemFillColorAttentionBackground;
+        border: 1px solid $CardStrokeColorDefault;
+        .text-3bXy2L{
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+            strong{
+                font-weight: normal;
+            }
+        }
+    }
+    // Remove dividers
+    .divider_a2339a{
+        display: none;
+    }
+
+    // My Account
+    .accountProfileCard__22589{
+        background-color: transparent;
+        // Remove coloured banner
+        .bannerSVGWrapper__3e7b0{
+            display: none;
+        }
+
+        .userInfo__8f826{
+            height: 68px;
+            margin: 0 0 32px 0;
+            padding: 0;
+            justify-content: flex-start;
+            gap: 16px;
+            align-items: center;
+            // Avatar
+            .avatar__6c108{
+                width: 64px !important; // Override inline
+                height: 64px !important; // Override inline
+                position: relative;
+                top: unset;
+                left: unset;
+                border: 2px solid #000;
+                svg{
+                    width: unset !important; // Override inline
+                    height: unset !important; // Override inline
+                    foreignobject{
+                        width: 64px !important; // Override inline
+                        height: 64px !important; // Override inline
+                        mask: unset !important;
+                    }
+                    rect{
+                        display: none;
+                    }
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .button_afdfd9{
+                display: none;
+            }
+        }
+
+        // Body
+        .background_b61fcc{
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+        .fieldList_aab0de{
+            background-color: transparent;
+            .field__9e8e2{
+                min-height: 64px;
+                padding: 0 16px 0 48px;
+                margin: 0 0 4px 0;
+                background-color: $CardBackgroundFillColorDefault;
+                border: 1px solid $CardStrokeColorDefault;
+                border-radius: 4px;
+
+                .constrainedRow_b9e8cf{
+                    align-items: center;
+                }
+
+                .fieldTitle__47b24{
+                    margin-bottom: 0;
+                    @include TypeBody;
+                }
+                .text-md-normal__4afad{
+                    @include TypeCaption;
+                    color: $TextFillColorSecondary !important;
+                }
+
+                // Override the reveal button
+                .button_afdfd9.lookLink__93965{
+                    min-width: unset;
+                    padding: 0 0 0 4px;
+                    background-color: unset;
+                    border: unset;
+                    .contents_fb6220{
+                        color: $AccentLight3;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            // Icons
+            .field__9e8e2{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    top: 24px;
+                    left: 16px;
+                    @include FontIconFluent;
+                    font-size: 16px;
+                    color: $TextFillColorPrimary;
+                }
+                // Display name
+                &:nth-child(1)::before{
+                    content: "\E2AF"; // ContactInfo
+                }
+                // Username
+                &:nth-child(2)::before{
+                    content: "\E136"; // ContactInfo
+                }
+                // Email
+                &:nth-child(3)::before{
+                    content: "\E119"; // Mail
+                }
+                // Phone Number
+                &:nth-child(4)::before{
+                    content: "\E1C9"; // CellPhone
+                }
+            }
+
+
+        }
+    }
+
+    // User profile
+    &#profile-customization-tab{
+        .heading-lg-semibold_a200cd{
+            @include TypeTitle;
+        }
+
+        // Fix large nickname text in profile preview
+        // This fixes a Discord bug
+        .userText__3e8b7{
+            h4{
+                @include TypeSubtitle;
+            }
+        }
+    }
+    // About me
+    .channelTextArea__56a36{
+        .bioTextArea_a108c9{
+            height: auto;
+            background-color: $ControlFillColorDefault;
+            border: 1px solid;
+            border-bottom-width: 2px;
+            border-color: $ControlStrokeColorDefault;
+            border-radius: 4px;
+            // Set a static emoji icon
+            .emojiButton__8ff6a{
+                margin: 0 4px 0 0;
+                &::before{
+                    content: "\E76E"; //Emoji2
+                    color: $TextFillColorSecondary;
+                    @include FontIconFluent;
+                    font-size: 16px;
+                }
+                &.emojiButtonHovered__4c6c4::before{
+                    color: $TextFillColorPrimary;
+                }
+            }
+        }
+        .characterCount_e55010{
+            top: -24px;
+            bottom: unset;
+        }
+    }
+
+    // Authorised apps
+    // Banner
+    .formNotice__8622e{
+        background-color: $SystemFillColorAttentionBackground;
+        border: 1px solid $CardStrokeColorDefault;
+        .formText_e4d957{
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+        }
+    }
+    // Apps
+    .authedApp__51b26{
+        background-color: $SystemFillColorAttentionBackground;
+        border: 1px solid $CardStrokeColorDefault;
+        .permission_b5be39{
+            .permissionCheckmark__27f79{
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                background-color: $SystemFillColorSuccess;
+                background-size: unset;
+                background-image: none;
+                border-radius: 50%;
+                filter: none;
+                &::before{
+                    content: "\E001"; // CheckMark(Private)
+                    @include FontIconFluent;
+                    font-size: 12px;
+                    font-weight: bold;
+                    line-height: 16px;
+                    text-align: center;
+                    color: $TextOnAccentFillColorPrimary;
+                }
+            }
+        }
+    }
+
+    // Connections
+    // List of services
+    .connectContainer__8050b{
+        background-color: $SystemFillColorAttentionBackground;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+        // Header
+        .connectHeader__04762{
+            @include TypeBodyStrong;
+        }
+        // Account button
+        .accountButtonInner__80e3a{
+            background-color: $ControlFillColorDefault;
+            border: 1px solid $ControlStrokeColorDefault;
+            &:hover{
+                background-color: $ControlFillColorSecondary;
+            }
+            &:active{
+                background-color: $ControlFillColorTertiary;
+            }
+        }
+    }
+
+    // Connection
+    .connection_fff5f6{
+        background-color: $SystemFillColorAttentionBackground;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+        .connectionHeader__3c82d{
+            padding: 16px;
+            background-color: $SystemFillColorAttentionBackground;
+            border-bottom: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px 4px 0 0;
+            .connectionAccountValue__2ab34{
+                margin-left: 16px;
+                @include TypeBodyStrong;
+            }
+            .connectionAccountLabel_a71192{
+                margin-left: 16px;
+                @include TypeCaption;
+            }
+        }
+        .connectionOptionsWrapper_abe849{
+            padding: 16px 16px 0 16px;
+        }
+        .connectionOptionSwitch_b4c979{
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+        }
+        .title__28a65{
+            @include TypeBody;
+        }
+        .integration_d2f026{
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+        }
+    }
+
+    // Privacy & Safety
+    &#privacy-\&-safety-tab{
+        // 'In-game rewards (aka Drops)' (Beta)
+        .container_c52416 {
+            margin-bottom: 8px;
+            padding: 16px;
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            .title__28a65{
+                @include TypeBody;
+            }
+            .description__7af71 {
+                @include TypeCaption;
+                color: $TextFillColorSecondary;
+            }
+        }
+        .dependentSetting_a6ce9a{
+            padding-left: 0;
+        }
+    }
+
+    // Family Centre
+    &#family-center-tab{
+        // Activity tab boxes
+        .container__6968f,
+        .container__9c82e,
+        .container__9f90c,
+        .box__6431e {
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            box-shadow: none;
+        }
+        // Make the layout full-width
+        .max-width_df086e,
+        .max-width__4cc00{
+            max-width: unset;
+        }
+
+        // My family tab boxes
+        .box__6431e {
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            box-shadow: none;
+        }
+        // Make the layout full-width
+        .container__5ed3b{
+            max-width: unset;
+        }
+    }
+
+    // Subscriptions
+    &#subscriptions-tab{
+        .sectionTitle__1605a{
+            margin-bottom: 32px;
+            @include TypeTitle;
+        }
+    }
+
+    // Billing
+    &#billing-tab{
+        // Only apply to the main header, not the secondary "Transaction History" header
+        .title__3e421 .flex_f5fbb7{
+            margin-bottom: 32px;
+            @include TypeTitle;
+            // Remove lock icon
+            svg{
+                display: none;
+            }
+        }
+    }
+
+    // Appearance
+    // Chat preview
+    .preview_f42b5d{
+        background-color: $LayerFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+    }
+    // Theme
+    .presets__14d08{
+        padding: 16px;
+        margin-bottom: 0;
+    }
+    // Nitro themes
+    .premiumFeatureBorder__9bbb3{
+        margin: 0;
+        background: transparent;
+        border: 0;
+        .headings__6a24e{
+            .title_cd37f6::after{
+                content: "Fluent Discord - Colour themes are not supported";
+                padding-left: 4px;
+                color: $TextFillColorDisabled;
+            }
+        }
+    }
+
+    // a11y
+    // Custom colours preview
+    .preview_a8dd8d{
+        background-color: $LayerFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        .previewMessage__1075c{
+            background-color: $LayerFillColorDefault;
+        }
+    }
+
+    // Voice & Video
+    &#voice-\&-video-tab{
+        // Fixes no spacing between video background and advanced sections
+        .h1__90460.title__3e421{
+            margin-top: 24px;
+        }
+    }
+
+    // Notifications
+    // Fix unsub from marketing emails button
+    &#notifications-tab{
+        .marketingUnsubscribeButton__72576{
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+    }
+
+    // Keybinds
+    // Warning
+    .container_de00a3.warning__9db16{
+        height: 48px;
+        padding: 8px 16px;
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        @include TypeBody;
+        .iconDiv_af991e{
+            align-self: center;
+            svg{
+                width: 16px;
+                height: 16px;
+                color: $SystemFillColorAttention;
+            }
+        }
+        .text__9e6e9{
+            margin-left: 16px;
+        }
+
+        // Align the Add keybind button with middle of warning
+        ~.flexChild__6e093{
+            align-self: center;
+        }
+    }
+    // Default keybinds
+    .defaultKeybindGroup__1adfb{
+        border: 1px solid $CardStrokeColorDefault;
+    }
+    .defaultKeybindGroupHeader_cee6f0 {
+        margin-bottom: 0;
+        padding: 16px;
+        background-color: $CardBackgroundFillColorDefault;
+        border-bottom: 0;
+        border-radius: 4px 4px 0 0;
+        @include TypeBody;
+        text-transform: none;
+    }
+    .defaultKeybindGroupDescription__42f90{
+        margin-bottom: 0;
+        padding: 0 16px 16px 16px;
+        background-color: $CardBackgroundFillColorDefault;
+        @include TypeCaption;
+        color: $TextFillColorSecondary;
+    }
+    .defaultKeybind__05c82{
+        height: 64px;
+        padding: 0 16px;
+        background-color: $CardBackgroundFillColorSecondary;
+        border-top: 1px solid $DividerStrokeColorDefault;
+        .text-md-normal__4afad{
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+        }
+        .defaultKeybindShortcutGroup_abdc8c span{
+            background-color: transparent;
+            border: 1px solid $ControlStrokeColorDefault;
+            box-shadow: inset 0 -4px 0 $ControlStrokeColorDefault;
+            @include FontMonospace;
+        }
+    }
+    // Catches the first keybind
+    .children_b15c64 > .defaultKeybind__05c82{
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+    }
+
+    // Registered games
+    &#game-activity-tab{
+        // Active game
+        .activeGame__99516{
+            &.notDetected__2a0c9{
+                background-color: $SystemFillColorAttentionBackground;
+                border: 1px solid $CardStrokeColorDefault;
+                border-radius: 4px;
+            }
+            &.nowPlayingAdd__7caf1{
+                background-color: $SystemFillColorSuccesBackground;
+            }
+        }
+        // Add new game
+        .nowPlayingAdd__7caf1{
+            width: 100%;
+            padding: 8px 16px;
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            span{
+                color: $TextFillColorPrimary;
+                line-height: 32px;
+            }
+            .button_afdfd9{
+                float: right;
+            }
+        }
+
+        // The games list
+        .game__19f4b{
+            padding: 12px 16px;
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+            border-bottom: 0;
+            box-shadow: none;
+            &:first-of-type{
+                border-radius: 4px 4px 0 0;
+            }
+            &:last-of-type{
+                border-bottom: 1px solid $CardStrokeColorDefault;
+                border-radius: 0 0 4px 4px;
+            }
+            &::before{
+                display: none;
+            }
+        }
+
+        // App name
+        .gameName_aeeab5{
+            @include TypeBodyStrong;
+        }
+        // Last played
+        .lastPlayed_accc56{
+            color: $TextFillColorSecondary;
+            .default_cae228{
+                @include TypeCaption;
+                strong{
+                    font-weight: normal;
+                }
+            }
+            .hovered__243e5{
+                @include FontMonospace;
+                @include TypeCaption;
+            }
+        }
+        .toggleContainer__26031{
+            margin-right: 8px;
+        }
+        // Remove button
+        .removeGame_aa12f1{
+            position: relative;
+            top: unset;
+            right: unset;
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+            filter: brightness(200%) grayscale(100%);
+            &:hover{
+                filter: unset;
+            }
+        }
+    }
+}

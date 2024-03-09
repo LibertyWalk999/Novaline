@@ -1,0 +1,84 @@
+.theme-dark .container_b2ce9c{
+    background: $LayerOnMicaBaseAltFillColor;
+    border-left: 1px solid $CardStrokeColorDefault;
+
+    .members__9f47b{
+        background-color: transparent;
+    }
+
+    // Group header
+    .membersGroup__85843{
+        padding: 20px 8px 0 15px;
+    }
+    .container_de798d{
+        color: $TextFillColorPrimary;
+        @include TypeBodyStrong;
+        text-transform: none;
+    }
+
+
+    // Member
+    .container__4f20e{
+        margin-left: 7px;
+        background: transparent;
+        color: $TextFillColorPrimary;
+        // Greyscale offline avatars
+        &.offline_c1fd80{
+            .avatar__6337f{
+                filter: grayscale(100%);
+            }
+            &:hover{
+                .avatar__6337f{
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+    .layout_bb8e67{
+        border: 1px solid transparent;
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+            border-color: $SubtleFillColorSecondary;
+        }
+        &::before{
+            content: "";
+            width: 3px;
+            height: 16px;
+            position: absolute;
+            width: 3px;
+            height: 16px;
+            top: 16px;
+            left: 0;
+            background-color: $AccentFillColorDefault;
+            border-radius: 999px;
+
+            transform: scaleY(0%);
+            opacity: .3;
+            transition: transform 167ms Cubic-bezier(0,0,0,1),
+                        opacity 167ms Cubic-bezier(0,0,0,1);
+        }
+    }
+    // Selected (user popout open)
+    .selected__9800b .layout_bb8e67{
+        background-color: $SubtleFillColorSecondary;
+        border-color: $SubtleFillColorSecondary;
+        &::before{
+            transform: scaleY(100%);
+            opacity: 1;
+            transition: transform 250ms Cubic-bezier(0.55,0.55,0,1),
+                        opacity 250ms Cubic-bezier(0.55,0.55,0,1);
+        }
+    }
+    // Username
+    .name__16feb{
+        @include TypeBody;
+    }
+    // Activity
+    .activity__3cbac{
+        @include TypeCaption;
+        color: $TextFillColorSecondary;
+        strong{
+            @include TypeCaption;
+        }
+    }
+}

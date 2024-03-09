@@ -1,0 +1,64 @@
+html[lang^="en-"].theme-dark .wrapper_c727b6{
+    .button_d553e5{
+        &[aria-label="Reply"]::before{
+            content: "\E97A"; // Reply
+        }
+        &[aria-label="Edit"]::before{
+            content: "\E104"; // Edit
+        }
+        &[aria-label="Create Thread"]::before{
+            content: "\E15C"; // ShowResults
+        }
+        &[aria-label="View Thread"]::before{
+            content: "\E15C"; // ShowResults
+        }
+        &[aria-label="Mark Unread"]::before{
+            content: "\E119"; // Mail
+        }
+        &[aria-label="Pin Message"]::before{
+            content: "\E141"; // Pin
+        }
+        &[aria-label="Unpin Message"]::before{
+            content: "\E196"; // UnPin
+        }
+        &[aria-label="Copy Link"]::before{
+            content: "\E167"; // Link
+        }
+        &[aria-label="Copy Message ID"]::before{
+            content: "ID";
+            @include FontNormal;
+        }
+        &[aria-label="Reactions"]::before{
+            content: "\E11D"; // Emoji
+        }
+        &[aria-label="Add Super Reaction"]::before{
+            content: "\EA38"; // Asterisk
+        }
+        &[aria-label="Delete"]::before{
+            content: "\E107"; // Delete
+        }
+        &[aria-label="Add Reaction"]::before{
+            content: "\E11D"; // Emoji
+        }
+        &[aria-label="Publish"]::before{
+            content: "\E789"; // Megaphone
+        }
+        &[aria-label="Published"]::before{
+            content: "\E081"; // Checkmark
+        }
+        &[aria-label="More"]::before{
+            content: "\E10C"; // More
+        }
+
+        // Upload attachment
+        &[aria-label="Spoiler Attachment"]::before{
+            content: "\ED1A"; // Hide
+        }
+        &[aria-label="Modify Attachment"]::before{
+            content: "\E104"; // Edit
+        }
+        &[aria-label="Remove Attachment"]::before{
+            content: "\E107"; // Delete
+        }
+    }
+}

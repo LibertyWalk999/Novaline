@@ -1,0 +1,54 @@
+.theme-dark .titleBar__01af6{
+    background-color: transparent;
+    &.withFrame__485f4{
+        height: calc(32px - 4px);
+    }
+    .wordmarkWindows__05c46{
+        color: $TextFillColorDisabled;
+        &::after{
+            content: "Discord";
+            top: 9px;
+            left: 16px;
+            display: block;
+            position: absolute;
+            @include TypeCaption;
+        }
+        svg{
+            display: none;
+        }
+    }
+
+    // Controls
+    .winButton__88672{
+        width: 46px;
+        height: 32px;
+        background-color: transparent;
+        color: $TextFillColorDisabled;
+        transition: background-color $AnimationFadeInOut;
+
+        &:hover{
+            background-color: $ControlFillColorSecondary;
+            color: $TextFillColorPrimary; // Always change button icon color to primary when hovering
+        }
+        &:active{
+            background-color: $ControlFillColorTertiary;
+        }
+
+        &.winButtonClose__73489{
+            &:hover{
+                background-color: #C42B1C;
+            }
+            &:active{
+                background-color: rgba(#C42B1C, 90%);
+            }
+        }
+    }
+}
+
+// Change titlebar name and controls colour when app is focused
+html.theme-dark.app-focused{
+    .wordmarkWindows__05c46,
+    .winButton__88672{
+        color: $TextFillColorPrimary;
+    }
+}

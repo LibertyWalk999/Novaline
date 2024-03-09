@@ -1,0 +1,57 @@
+.theme-dark{
+    // Avatar
+    .avatar__445f3{
+        svg circle{
+            display: none;
+        }
+    }
+
+    // Body
+    .overlayBackground__86b78{
+        border-radius: 4px;
+    }
+
+    // Tabs
+    .tabBarContainer__63f55{
+        margin-bottom: 20px;
+        border: 0;
+    }
+
+    // Section headers
+    .userInfoSectionHeader__31b66{
+        @include TypeBodyStrong;
+        text-transform: none;
+    }
+
+    // Connected accounts
+    .connectedAccountContainer__23f00{
+        padding: 8px;
+        .connectedAccountNameText__00810{
+            @include TypeBody;
+        }
+        .anchor_c8ddc0{
+            text-decoration: none;
+            &::before{
+                content: "\E8A7";
+                color: $TextFillColorPrimary;
+                @include FontIconFluent;
+            }
+            svg{
+                display: none;
+            }
+        }
+    }
+
+    // Mutual servers/friends
+    .listRow__60937{
+        border: 1px solid transparent;
+        &:hover{
+            background-color: $ControlFillColorDefault;
+            border-color: $ControlStrokeColorDefault;
+            border-radius: 4px;
+        }
+        .listAvatar__907d4{
+            border-radius: 50%;
+        }
+    }
+}

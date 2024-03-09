@@ -1,0 +1,22 @@
+.theme-dark .userPopoutOuter_d739b2{
+    // Remove style from context menu in user popout
+    .menu_dc52c6.menu__5cf7f{
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        &::before{
+            content: unset;
+        }
+
+        .separator__18122{
+            display: none;
+        }
+
+        .item__183e8{
+            // Remove icon
+            .iconContainerLeft__4dcea{
+                display: none;
+            }
+        }
+    }
+}

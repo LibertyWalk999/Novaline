@@ -1,0 +1,189 @@
+.theme-dark .container_d6dad3{
+    background: $MicaBackgroundFillColorBase;
+    backdrop-filter: blur(16px);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px;
+
+    .header_b24bd1{
+        @include TypeBodyStrong;
+        color: $TextFillColorPrimary;
+        text-transform: none;
+    }
+
+    .option_b5597b{
+        margin: 1px 10px;
+        height: 32px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+            border-color: $SubtleFillColorSecondary;
+        }
+        &::after{
+            display: none;
+        }
+
+        .filter_bd5fe7,
+        .answer__9ff92,
+        .displayedNick_df9a16,
+        .displayUsername_aea59a,
+        .nonText_cbb69b,
+        strong{
+            @include TypeBody;
+        }
+
+        .filter_bd5fe7,
+        .displayedNick-1atSpT,
+        strong{
+            color: $TextFillColorPrimary;
+            @include TypeBody;
+        }
+        .answer__9ff92,
+        .displayUsername-UTerwm{
+            color: $TextFillColorSecondary;
+            @include TypeBody;
+        }
+    }
+    .resultsGroup-cfY57t .resultsGroup-cfY57t,
+    .resultsGroup-cfY57t .searchLearnMore-1gNL3A{
+        top: 16px;
+    }
+
+    // "Search for..." header
+    .queryContainer_c359fe{
+        background-color: $CardStrokeColorDefault;
+        queryText__5bb6b{
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+            text-transform: none;
+            strong::before,
+            strong::after{
+                content: "\"";
+            }
+        }
+    }
+
+
+    // Calendar
+    .react-datepicker{
+        background-color: transparent;
+        .react-datepicker__navigation{
+
+        }
+        // inc/dec month buttons
+        &__navigation.react-datepicker__navigation--previous{
+            width: 32px;
+            height: 32px;
+            top: 12px;
+            right: 64px;
+            left: unset;
+            background-image: none;
+            transform: none;
+            text-indent: unset;
+            border: 0;
+            border-radius: 4px;
+            &::before{
+                content: "\EDDB"; // CaretUpSolid8
+                @include FontIconFluent;
+                color: $TextFillColorSecondary;
+            }
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+            }
+            span{
+                display: none;
+            }
+        }
+        &__navigation.react-datepicker__navigation--next{
+            width: 32px;
+            height: 32px;
+            top: 12px;
+            right: 32px;
+            left: unset;
+            background-image: none;
+            transform: none;
+            text-indent: unset;
+            border: 0;
+            border-radius: 4px;
+            &::before{
+                content: "\EDDC"; // CaretDownSolid8
+                @include FontIconFluent;
+                color: $TextFillColorSecondary;
+            }
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+            }
+            span{
+                display: none;
+            }
+        }
+
+
+        // Header
+        &__header{
+            background-color: transparent;
+            border: 0;
+            text-align: left;
+        }
+        // Current month
+        &__current-month{
+            color: $TextFillColorPrimary;
+            @include TypeBodyStrong;
+            text-transform: none;
+            border: 0;
+        }
+        // Calendar
+        // weekdays
+        &__day-name{
+            color: $TextFillColorPrimary;
+            @include TypeBodyStrong;
+            text-transform: none;
+        }
+        // Week
+        &__week .react-datepicker__day{
+            @include TypeBody;
+            line-height: 40px; // override
+            border: 0;
+            border-radius: 50%;
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+            }
+            &--outside-month{
+                background-color: transparent;
+            }
+            &--today{
+                // background-color: $AccentTextFillColorPrimary;
+                box-shadow: inset 0 0 0 1px $AccentTextFillColorPrimary;
+                color: $AccentTextFillColorPrimary;
+            }
+            &--selected{
+
+                border-color: $AccentTextFillColorPrimary;
+                &::after{
+                    content: unset;
+                }
+            }
+            &--keyboard-selected:not(--selected){
+                background-color: $AccentTextFillColorPrimary;
+            }
+            &--disabled{
+                background-color: transparent;
+                color: $TextFillColorDisabled;
+                &:hover{
+                    background-color: transparent;
+                    color: $TextFillColorDisabled;
+                }
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 28px;
+                    top: 8px;
+                    left: 20px;
+                    position: absolute;
+                    background-color: $TextFillColorDisabled;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

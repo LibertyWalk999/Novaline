@@ -1,0 +1,55 @@
+.theme-dark .privateChannels__93473{
+    .link__2e8e1[href="/channels/@me"]{
+        .avatar__7bd22{
+            &::before{
+                content: "\E13D"; // Contact
+                @include FontIconFluent;
+                color: $TextFillColorSecondary;
+            }
+            svg{
+                display: none;
+            }
+        }
+    }
+    .link__2e8e1[href="/store"]{
+        display: none;
+    }
+
+    .interactive_a868bc{
+        &:hover,
+        &:focus-within{
+            background-color: $SubtleFillColorSecondary;
+            box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
+            .name__02dbd{
+                color: $TextFillColorPrimary;
+            }
+        }
+        &.selected_d94cf9{
+            background-color: $SubtleFillColorSecondary;
+        }
+
+        .layout__59abc{
+            padding: 0 8px;
+        }
+
+        // Name
+        .name__02dbd{
+            @include TypeBody;
+            color: $TextFillColorSecondary;
+        }
+        // Activity
+        .activityText__84949{
+            @include TypeCaption;
+            color: $TextFillColorSecondary;
+        }
+    }
+
+    // DMs header
+    .privateChannelsHeaderContainer_ddcec6 {
+        height: auto;
+        padding: 12px;
+        color: $TextFillColorPrimary;
+        @include TypeBody;
+        text-transform: none;
+    }
+}

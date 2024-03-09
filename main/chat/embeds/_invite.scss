@@ -1,0 +1,73 @@
+.theme-dark .wrapper_efe67f{
+    width: 400px;
+    background-color: $CardBackgroundFillColorDefault;
+    border: 1px solid $SurfaceStrokeColorFlyout;
+    border-radius: 8px;
+
+    // Header
+    .header_aea860{
+        color: $TextFillColorPrimary;
+        @include FontNormal;
+        @include TypeBodyStrong;
+        text-transform: none;
+    }
+
+    // Icon
+    .guildIcon_bcc098{
+        border-radius: 50%;
+        align-self: center;
+    }
+    // Expired icon
+    .guildIconExpired__1d51f{
+        background-color: transparent;
+        background-image: none;
+        &::before{
+            content: "\EA39"; // ErrorBadge
+            position: absolute;
+            width: 48px;
+            @include FontIconFluent;
+            color: $TextFillColorDisabled;
+            font-size: 48px;
+            line-height: 48px;
+            text-align: center;
+        }
+    }
+
+    .statusCounts_f36cad{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    // Online users
+    i.status__5b71e{
+        display: none;
+    }
+    .count__72c4c{
+        padding-left: 12px;
+        position: relative;
+        @include TypeBody;
+        flex-direction: row;
+    }
+    i.statusOnline__13c7b ~ span{
+        &::before{
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            background-color: #6bb700;
+            border-radius: 4px;
+        }
+    }
+    i.statusOffline__84b14 ~ span{
+        &::before{
+            background-color: #8a8886;
+        }
+    }
+
+    // Button
+    .button__8ec71.buttonSize_b01b54{
+        height: 32px;
+    }
+}

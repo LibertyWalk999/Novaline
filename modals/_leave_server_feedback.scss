@@ -1,0 +1,22 @@
+.theme-dark{
+    .header_c2c186{
+        @include TypeSubtitle;
+        text-align: left;
+    }
+
+    .problemInfo__4ad5d{
+        .root_b4f834{
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+        }
+        .option_f70eea{
+            &:hover{
+                background-color: $CardBackgroundFillColorSecondary;
+            }
+        }
+        .text_f09abc{
+            @include TypeBody;
+        }
+    }
+}

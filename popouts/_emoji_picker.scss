@@ -1,0 +1,228 @@
+.theme-dark .contentWrapper__321ed,
+.theme-dark #emoji-picker-tab-panel{
+    background: $MicaBackgroundFillColorBase;
+    backdrop-filter: blur(16px);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px;
+}
+
+.theme-dark .contentWrapper__321ed #emoji-picker-tab-panel{
+    background: transparent;
+    backdrop-filter: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.theme-dark{
+    // Navigation
+    .nav__2bf35{
+        .navButton__05cc7 {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 16px;
+            color: $TextFillColorPrimary;
+            border-radius: 0;
+            &:hover{
+                background-color: transparent;
+                color: $TextFillColorSecondary;
+            }
+
+        }
+        .navButtonActive__735cb {
+            background-color: transparent;
+            color: $AccentTextFillColorPrimary;
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 2px;
+                background-color: $AccentLight3;
+                border-radius: 2px;
+            }
+            &:hover{
+                color: $TextFillColorSecondary;
+            }
+        }
+    }
+
+    // Header
+    .emojiPickerHasTabWrapper__80686 .header__55964{
+        padding: 0 12px 12px;
+    }
+    .header__55964, // Emoji
+    .header_f71767, // Stickers
+    .header_f7f1f3{ // GIFs
+        background-color: transparent;
+        box-shadow: none;
+    }
+    // Search
+    .inner__178b2{
+        padding: 0;
+    }
+    .container__7712a{ // GIFs search
+        background-color: transparent;
+    }
+    // Emoji search
+    // Fix inherited height
+    .medium__2d9f3 .input_f4043f{
+        height: 32px;
+    }
+    .input_f4043f{
+        margin: 0;
+        padding-right: 32px;
+        background-color: $ControlFillColorDefault;
+        color: $TextFillColorSecondary;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-bottom: 2px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+        @include TypeBody;
+        &:hover{
+            border-color: $ControlStrokeColorSecondary;
+        }
+        &:focus{
+            background-color: $ControlFillColorInputActiveBrush;
+            color: $TextFillColorPrimary;
+            border-color: $ControlStrokeColorDefault;
+            border-bottom-color: $AccentBase;
+        }
+        &::placeholder{
+            @include TypeBody;
+        }
+    }
+    // Search clear button
+    .iconLayout__9fbb1{
+        position: absolute;
+        top: 6px;
+        right: 4px;
+        &.medium__2d9f3{
+            width: 22px;
+            height: 22px;
+            .iconContainer__8fa9c{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    // Emoji
+    // Sidebar
+    .categoryList_f8c48f{
+        background-color: $SolidBackgroundFillColorBase;
+    }
+    // Replace emoji icons
+    .categoryItemDefaultCategory__67fe7{
+        &.categoryItem__39904{
+            svg{
+                display: none;
+            }
+            &::before{
+                padding: 2px;
+                color: $TextFillColorPrimary;
+                @include FontIconFluent;
+                font-size: 20px;
+                line-height: calc(32px - 8px);
+                vertical-align: middle;
+            }
+            &[aria-label="top guild emoji"]::before{
+                content: "\E734"; // FavoriteStar
+            }
+            &[aria-label="recent"]::before{
+                content: "\E81C"; // History
+            }
+            &[aria-label="people"]::before{
+                content: "\ED53"; // EmojiTabPeople
+            }
+            &[aria-label="nature"]::before{
+                content: "\E8BE"; // Leaf
+            }
+            &[aria-label="food"]::before{
+                content: "\ED56"; // EmojiTabFoodPlants
+            }
+            &[aria-label="activity"]::before{
+                content: "\EA86"; // Puzzle
+            }
+            &[aria-label="travel"]::before{
+                content: "\ED57"; // EmojiTabTransitPlaces
+            }
+            &[aria-label="objects"]::before{
+                content: "\ED55"; // EmojiTabCelebrationObjects
+            }
+            &[aria-label="symbols"]::before{
+                content: "\ED58"; // EmojiTabSymbols
+            }
+            &[aria-label="flags"]::before{
+                content: "🏳‍🌈";
+                @include TypeBody;
+            }
+        }
+    }
+    // Info bar
+    .inspector__993e1 {
+        background-color: $SolidBackgroundFillColorSecondary;
+    }
+    // "Popular" badge in info bar
+    .topGuildEmojiBadge__24efb{
+        display: none;
+    }
+
+    // Emoji category header
+    .header_c3c744,
+    .wrapper-1NNaWG{
+        margin: 0 -8px;
+        padding: 0 16px;
+        background-color: $SolidBackgroundFillColorTertiary;
+        border-radius: 4px;
+        .headerLabel_e9f74f{
+            @include TypeBodyStrong;
+            color: $TextFillColorPrimary;
+            text-transform: none;
+        }
+    }
+
+    // Colour change
+    .diversitySelectorButton_a4f274{
+        width: 30px;
+        height: 30px;
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+        position: relative;
+        .diversityEmojiItemImage__4387d{
+            margin: 3px;
+        }
+    }
+    // Diversity selector in stand alone emoji popout (eg. reaction)
+    .diversitySelectorOptions__846c5 {
+        // top: 0;
+        right: 12px;
+    }
+    .diversitySelectorOptions__846c5 {
+        border: 1px solid $ControlStrokeColorDefault;
+        .diversityEmojiItem__6505f{
+            width: 30px;
+            height: 30px;
+            padding: 0;
+        }
+        .diversityEmojiItemImage__4387d{
+            margin: 3px;
+        }
+    }
+
+
+    // Nitro prompt
+    .premiumPromo__2d678{
+        background-color: $CardStrokeColorDefaultSolid;
+        .premiumPromoImage_a670c5{
+            display: none;
+        }
+        .premiumPromoTitle__68b72{
+            @include TypeBodyLarge;
+        }
+        .premiumPromoDescription_a33e5d{
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+        }
+    }
+}

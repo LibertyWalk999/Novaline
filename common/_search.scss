@@ -1,0 +1,41 @@
+.theme-dark{
+    .input__74754{
+        height: 32px;
+        padding: 0 8px;
+        border: 1px solid;
+        border-bottom-width: 2px;
+        border-color: $ControlStrokeColorDefault;
+        border-radius: 4px;
+        @include TypeBody;
+        background-color: $ControlFillColorDefault;
+        color: $TextFillColorSecondary;
+        &:hover{
+            border-color: $ControlStrokeColorSecondary;
+        }
+        &:focus{
+            background-color: $ControlFillColorInputActiveBrush;
+            color: $TextFillColorPrimary;
+            border-color: $ControlStrokeColorDefault;
+            border-bottom-color: $AccentBase;
+        }
+        &::placeholder{
+            color: $TextFillColorSecondary;
+        }
+    }
+
+    .iconLayout__6d744{
+        position: absolute;
+        top: 6px;
+        right: 8px;
+
+        // Home friends table seach bar
+        &.medium__0fb5d{
+            width: 22px;
+            height: 22px;
+            .iconContainer__3af05{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

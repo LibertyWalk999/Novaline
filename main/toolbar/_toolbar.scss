@@ -1,0 +1,111 @@
+.theme-dark .title_b7d661, // Normal toolbar
+.theme-dark .container-ZMc96U{ // Browse channels toolbar
+    padding: 0 0 0 20px;
+    &.themed_b152d4{
+        background-color: transparent;
+    }
+    // Channel & MOTD
+    // Remove hash symbol
+    .children__32014{
+        // Gradient at end of MOTD field
+        &::after{
+            display: none;
+        }
+        .iconWrapper_af9215{
+            display: none;
+        }
+    }
+    // Channel name
+    .title__9e2b0{
+        @include TypeBodyStrong
+    }
+
+    // Remove divider
+    .divider_c09b64{
+        display: none;
+    }
+
+    // MOTD
+    .topic__16ae3{
+        color: $TextFillColorPrimary;
+        @include TypeBody;
+    }
+
+    // Add some margin to the caret when in fullscreen thread view
+    .caret__33d19{
+        margin-right: 8px;
+    }
+}
+
+// Toolbar
+.theme-dark .toolbar__88c63{
+    // Using these selectors so there are fewer conflicts in the voice screen
+    div[role=button]:not(.iconLayout__9fbb1), // :not excludes the search/clear button in the search bar
+    button[type=button]{
+        width: 60px;
+        height: 32px;
+        margin: 0 4px 0 0;
+        border-radius: 4px;
+        transition: background-color $AnimationFadeInOut;
+        &:hover{
+            background-color: $ControlFillColorSecondary;
+            transition: background-color $AnimationFadeInOut;
+        }
+        > svg{ // Non-EN position fix
+            position: absolute;
+            top: 4px;
+            left: 20px;
+            width: 20px;
+        }
+
+        // Selected
+        &.selected_be2668{
+            background-color: $AccentFillColorSecondary;
+            &::before{
+                color: $TextOnAccentFillColorPrimary;
+            }
+            .count-vTKEhF{
+                color: $TextOnAccentFillColorPrimary !important; // Override inline
+            }
+        }
+        // Toggled (mute channel)
+        &[aria-checked="true"]{
+            color: $SystemFillColorCritical;
+        }
+    }
+    .count-vTKEhF{
+        position: absolute;
+        top: 2px;
+        left: 38px;
+        @include TypeCaption;
+    }
+    .iconBadge_cc5031{
+        width: 16px;
+        height: 3px;
+        right: 22px;
+        bottom: 0;
+        border-radius: 2px;
+        background-color: $SystemFillColorCritical;
+        z-index: -1;
+    }
+}
+
+// Icon replacements
+html[lang^="en-"].theme-dark .toolbar__88c63{
+    .iconWrapper_af9215{
+        &::before{
+            @include FontIconFluent;
+            width: 60px;
+            position: absolute;
+            font-size: 16px;
+            line-height: 32px;
+            text-align: center;
+            display: block;
+        }
+        // Remove default icon
+        .icon__4cb88,
+        .controlIcon-35oS15{
+            display: none;
+        }
+    }
+}

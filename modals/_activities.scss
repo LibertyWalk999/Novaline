@@ -1,0 +1,43 @@
+.theme-dark .root__9b46d{
+    margin-top: 0;
+    background-color: transparent;
+
+    .shelfTopBackground__8e15b{
+        display: none;
+    }
+
+    // Header
+    .headerTextContainer_d95113{
+        align-items: unset;
+    }
+    .activityShelfTitle_ae63a8{
+        justify-content: unset;
+        .heading-xl-extrabold__6407c{
+            @include TypeSubtitle;
+        }
+    }
+    .text-sm-normal_e612c7{
+        margin-top: 4px;
+    }
+
+    // Content
+    .scrollTierBackground__36806{
+        background-color: $LayerFillColorAlt;
+    }
+
+    .activityItem__33da9{
+        background-color: $CardBackgroundFillColorDefault;
+    }
+    .activityTitleText__61fe6{
+        @include TypeBodyStrong;
+    }
+    .activitySubtitleText__4ebd7{
+        @include TypeCaption;
+    }
+    .activityTag__01970{
+        padding: 2px 8px;
+        background-color: $SystemFillColorSolidNeutralBackground;
+        @include TypeCaption;
+        color: $TextFillColorSecondary !important; // Override inline
+    }
+}

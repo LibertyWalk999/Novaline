@@ -1,0 +1,188 @@
+// Radio groups
+.theme-dark div[role=radiogroup]{
+    background-color: $SystemFillColorAttentionBackground;
+    border: 1px solid $CardStrokeColorDefault;
+    border-radius: 4px;
+    .item_b7fb7e{
+        margin-bottom: 0;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        &.itemFilled__373d7{
+            background-color: transparent;
+        }
+        &[aria-checked=true]{
+            background-color: transparent;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+
+        // Privacy & Safety
+        // Remove coloured bars on left side
+        .radioBar__40e1b{
+            border: 0;
+        }
+
+        .info__05cbd{
+            grid-gap: 0;
+            .text-md-medium__5151a{
+                @include TypeBody;
+            }
+
+            // Fixes for create channel modal
+            .radioText-3Mv1MY{
+                color: $TextFillColorPrimary;
+                &.size16-rrJ6ag{
+                    @include TypeBodyStrong;
+                }
+                &.size12-oc4dx4{
+                    @include TypeBody;
+                }
+            }
+            // Fixes for Privacy settings
+            .text-md-medium__5151a{
+                @include TypeBodyStrong;
+                color: $TextFillColorPrimary;
+            }
+            .text-sm-normal_e612c7{
+                @include TypeCaption;
+                color: $TextFillColorSecondary;
+            }
+        }
+    }
+}
+
+// Toggle switch
+.theme-dark .control_f6cce7{
+    .container__871ba{
+        background-color: transparent !important; // Override inline
+        svg{
+            display: none;
+        }
+    }
+    .input_be50d1{
+        width: 40px;
+        height: 20px;
+        margin: 0;
+        background-color: $ControlAltFillColorSecondary;
+        border: 1px solid $ControlStrongFillColorDefault;
+        border-radius: 10px;
+        appearance: none;
+        opacity: 1;
+        &::before{
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            background-color: $TextFillColorSecondary;
+            border-radius: 6px;
+        }
+        &:hover{
+            background-color: $ControlAltFillColorTertiary;
+            &::before{
+                transform: scale(1.167);
+                transition: left 187ms cubic-bezier(0.55, 0.55, 0, 1);
+            }
+        }
+        &:checked{
+            background-color: $AccentTextFillColorPrimary;
+            border-color: $AccentTextFillColorPrimary;
+            &::before{
+                left: 24px;
+                background-color: $TextOnAccentFillColorPrimary;
+                transition: left 187ms cubic-bezier(0.55, 0.55, 0, 1);
+            }
+        }
+    }
+}
+
+// Checkbox (in settings UI)
+.theme-dark .checkboxWrapper__02583{
+    .input_f56cea,
+    .box-qwm0Q_{
+        width: 18px;
+        height: 18px;
+        position: relative;
+        background-color: $ControlAltFillColorSecondary;
+        border: 1px solid $ControlStrongFillColorDefault;
+        border-radius: 4px;
+        appearance: none;
+        opacity: 1;
+        &:hover{
+            background-color: $ControlAltFillColorTertiary;
+        }
+        svg{
+            display: none;
+        }
+    }
+    &.checked__24ad6{
+        .input_f56cea,
+        .box-qwm0Q_{
+            background-color: $AccentTextFillColorPrimary !important;
+            border-color: $AccentTextFillColorPrimary !important;
+            &:hover{
+                background-color: $AccentTextFillColorSecondary !important;
+            }
+            &::before{
+                content: "\E001"; // CheckMark(Private)
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                @include FontIconFluent;
+                font-size: 16px;
+            }
+        }
+    }
+    .checkbox_c7f690{
+        display: none;
+    }
+}
+// Checkbox (in context menu)
+.theme-dark .menu_dc52c6 .item__183e8[role="menuitemcheckbox"]{
+    .iconContainer__829e7{
+        width: 18px;
+        height: 18px;
+        position: relative;
+        background-color: $ControlAltFillColorSecondary;
+        border: 1px solid $ControlStrongFillColorDefault;
+        border-radius: 4px;
+
+        svg{
+            display: none;
+        }
+    }
+    &[aria-checked=true] .iconContainer__829e7{
+        background-color: $AccentTextFillColorPrimary;
+        border-color: $AccentTextFillColorPrimary;
+        color: $TextOnAccentFillColorPrimary;
+        &::before{
+            content: "\E001"; // CheckMark(Private)
+            position: absolute;
+            top: -1px;
+            left: 1px;
+            @include FontIconFluent;
+            font-size: 16px;
+        }
+    }
+    &:hover .iconContainer__829e7{
+        background-color: $ControlAltFillColorTertiary;
+    }
+    &[aria-checked=true]:hover .iconContainer__829e7{
+        background-color: $AccentTextFillColorSecondary;
+    }
+}
+
+// Textbox with emoji button (set custom status modal)
+.theme-dark .inputContainer_e8ca07{
+    .emojiButtonContainer__59552{
+        right: 0;
+        left: unset;
+        ~ .inputWrapper__934f5{
+            .input_d266e7{
+                padding-right: 40px;
+            }
+        }
+    }
+}

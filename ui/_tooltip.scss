@@ -1,0 +1,16 @@
+.theme-dark .tooltip__01384{
+    padding: 8px 12px;
+    background: $AcrylicBackgroundFillColorBase;
+    border: 1px solid $SurfaceStrokeColorFlyout;
+    border-radius: 4px;
+    color: $TextFillColorPrimary;
+    @include Elevation16;
+    // box-sizing: unset;
+    @include TypeBody;
+    .tooltipPointer_a79354{
+        display: none;
+    }
+    .tooltipContent__79a2d{
+        padding: 0;
+    }
+}

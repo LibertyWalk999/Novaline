@@ -1,0 +1,52 @@
+// Remove background from RTC/account
+.theme-dark .panels__58331{
+    background-color: transparent;
+
+    // Remove 1px margin from bottom of panel
+    .container_ca50b9{
+        background-color: transparent;
+        height: 48px;
+        margin-bottom: 0;
+    }
+
+    // Remove margin on avatar/username wrapper
+    .avatarWrapper_ba5175{
+        margin-right: 0;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+
+    .button__4f306{
+        margin-left: 4px;
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+        color: $TextFillColorPrimary;
+        &:hover{
+            background-color: $ControlFillColorSecondary;
+        }
+        &:active{
+            background-color: $ControlFillColorTertiary;
+        }
+        .contents_fb6220{ // Non-EN sizing fix
+            svg{
+                position: absolute;
+                top: 7px;
+                left: 7px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+
+        // Make muted buttons red
+        &[aria-checked=true]{
+            border-color: $SystemFillColorCritical;
+            color: $SystemFillColorCritical;
+        }
+    }
+}
+

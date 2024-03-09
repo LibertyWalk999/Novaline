@@ -1,0 +1,76 @@
+@keyframes fluent-setting-rot {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+// Also includes the RTC controls icons to save having another file
+html[lang^="en-"].theme-dark .panels__58331 .button_afdfd9{
+    &[aria-label="Deafen"][aria-checked=true]::before{
+        content: "\E74F"; // Mute
+    }
+    &[aria-label="Deafen"][aria-checked=false]::before{
+        content: "\E767"; // Volume
+    }
+    &[aria-label="Mute"][aria-checked=true]::before{
+        content: "\EC54"; // MicOff
+    }
+    &[aria-label="Mute"][aria-checked=false]::before{
+        content: "\E720"; // Microphone
+    }
+    &[aria-label^="User settings" i]::before{
+        content: "\E713"; // Settings
+    }
+    &[aria-label^="User settings" i]{
+        &:hover{
+            &::before{
+                animation: fluent-setting-rot 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+            }
+        }
+    }
+
+    // RTC
+    &[aria-label="Noise Suppression powered by Krisp" i]::before{
+        content: "\F61F"; // NoiseCancellation
+    }
+    &[aria-label="Disconnect"]::before{
+        content: "\E137"; // HangUp
+    }
+    &[aria-label="Leave Activity"]::before,
+    &[aria-label="Disconnect Quietly"]::before{
+        content: "\E11F"; // LeaveChat
+    }
+
+    // Streaming
+    &[aria-label*="Stream"]::before,
+    &[aria-label*="Go Live"]::before,
+    &[aria-label*="Navigate to a server to start streaming."]::before{
+        content: "\EBC6"; // Project
+    }
+    &[aria-label="Stop Streaming"]::before{
+        content: "\EA14"; // DisconnectDisplay
+    }
+
+    // Spotify
+    &[aria-label="Stop"]::before{
+        content: "\E15B"; // Stop
+    }
+}
+
+html[lang^="en-"].theme-dark .panels__58331 .actionButtons_b58cbb button.button_afdfd9{
+    &[aria-label*="camera" i]::before{
+        content: "\E156"; // WebCam
+    }
+    &[aria-label*="screen" i]::before{
+        content: "\EC15"; // MiracastLogoSmall
+    }
+    &[aria-label*="activity" i]::before{
+        content: "\EA86" // Puzzle
+    }
+    &[aria-label*="soundboard" i]::before{
+        content: "\F0ED" // SpatialVolume2
+    }
+}

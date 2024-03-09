@@ -1,0 +1,165 @@
+.theme-dark .contentColumn_dc7d36{
+    // Roles
+    // Fix header
+    &#roles-tab{
+        .title__3e421{
+            @include TypeTitle;
+        }
+
+
+        // Advanced permissions
+        .contentContainer__23092{
+            left: 256px;
+        }
+        .contentWidth_b55791{
+            max-width: calc(1000px - 232px);
+        }
+
+        // Left
+        .container_ee1515{
+            .titleContainer_e558ff{
+                padding-top: 40px;
+                background-color: transparent;
+                .titleText__2ee04{
+                    @include TypeSubtitle;
+                    text-transform: none;
+                }
+            }
+            .list__41249{
+                padding: 0 16px 96px 16px;
+            }
+        }
+        // Right
+        .header__63c59{
+            padding-top: 40px;
+            background-color: $CardStrokeColorDefaultSolid;
+            .titleText_c58c2c{
+                @include TypeSubtitle;
+                text-transform: none;
+            }
+        }
+    }
+
+
+    // Server template
+    // Fix header
+    &#guild_templates-tab{
+        .title__3e421{
+            @include TypeTitle;
+        }
+    }
+
+    // Custom invite link
+    // Fix header
+    &#vanity_url-tab{
+        .title__3e421{
+            @include TypeTitle;
+        }
+    }
+
+    // Integrations
+    &#integrations-tab{
+        .title__3e421{
+            @include TypeTitle;
+        }
+    }
+
+    // Automod
+    // Fix card background
+    .editCard_dfa091{
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+
+        .ruleIconContainer_baf164{
+            background-color: transparent;
+        }
+        // Pills
+        .actionContainer_d21d10{
+            padding: 4px 8px;
+            background-color: $SystemFillColorSolidNeutral;
+            .actionIcon__2a5f8{
+                color: $TextFillColorPrimary;
+            }
+            .actionTextHeader__87eb9{
+                color: $TextFillColorPrimary !important;
+                font-weight: normal;
+            }
+        }
+
+
+        .mentionLimitContainer__0f0ff,
+        .actionContainer__51bd9{
+            background-color: $CardBackgroundFillColorDefault;
+        }
+        .keywordListContainer_fdf41c{
+            margin-bottom: 0;
+            background-color: transparent;
+        }
+        .collapseable__71e46{
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+        }
+
+        // Select/drop down
+        .container_e4c233{
+            background-color: $ControlFillColorDefault;
+        }
+        .resultsList_bec6cd{
+            background: $SolidbackgroundFillColorQuarternary;
+            border: 1px solid $SurfaceStrokeColorFlyout;
+            border-radius: 4px;
+        }
+
+        // Textarea
+        .keywordTextArea__2035a{
+            background-color: $ControlFillColorDefault;
+            border: 1px solid;
+            border-bottom-width: 2px;
+            border-color: $ControlStrokeColorDefault;
+            border-radius: 4px;
+            &:hover{
+                border-color: $ControlStrokeColorSecondary;
+            }
+            &:focus{
+                background-color: $ControlFillColorInputActiveBrush;
+                color: $TextFillColorPrimary;
+                border-color: $ControlStrokeColorDefault;
+                border-bottom-color: $AccentBase;
+            }
+        }
+    }
+
+    // Audit Log
+    // NOTE: 2023-06-17 - Cannot target Audit log page
+
+    // Server boot status
+    // Fix title
+    &#guild_premium-tab{
+        .title__3e421 {
+            @include TypeTitle;
+        }
+    }
+
+    // Members
+    // NOTE: 2023-06-17 - Cannot target Members page
+
+    // Invites
+    // NOTE: 2023-06-17 - Cannot target Invites page
+
+    // Edge case fixes
+    // Channel Settings - Overview
+    // Fixes no spacing between channel name text box and Bitrate sections
+    .channel-settings-overview{
+        .marginBottom40__9109c{
+            margin-bottom: 24px;
+        }
+    }
+
+    // Always display the emoji name textbox
+    .emojiInput__4fe54{
+        opacity: 1;
+    }
+    .emojiAliasPlaceholder__71733{
+        display: none;
+    }
+}

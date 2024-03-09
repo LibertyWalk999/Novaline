@@ -1,0 +1,202 @@
+.theme-dark .title__317f4{
+    color: $TextFillColorPrimary;
+    @include TypeBody;
+    text-transform: none;
+}
+
+// NOTE: 2022-03-26 - hiddenDiv-2qTqSF is used in the credit card field. See #99
+.theme-dark .input_d266e7:not(.hiddenDiv__457a8){
+    height: 32px;
+    background-color: $ControlFillColorDefault;
+    border: 1px solid;
+    border-bottom-width: 2px;
+    border-color: $ControlStrokeColorDefault;
+    border-radius: 4px;
+    @include TypeBody;
+    color: $TextFillColorSecondary;
+
+    // Sizing
+    &.inputDefault__80165{
+        padding: 0 12px;
+        // height: 32px;
+    }
+
+    &:hover{
+        border-color: $ControlStrokeColorSecondary;
+    }
+    &:focus{
+        background-color: $ControlFillColorInputActiveBrush;
+        color: $TextFillColorPrimary;
+        border-color: $ControlStrokeColorDefault;
+        border-bottom-color: $AccentBase;
+    }
+    &::placeholder{
+        color: $TextFillColorSecondary;
+    }
+
+    &.textarea_c5a7a3, // eg. user popout note textarea
+    &.textArea__97e3f{ // eg. channel MOTD textare
+        padding: 4px 12px;
+    }
+}
+// Create channel prefix
+.theme-dark .inputPrefix__96ae7{
+    top: 8px;
+    ~ .input_d266e7{
+        // TODO - 2022-06-08: Resolve this conflict
+        padding-left: 32px !important; // Conflicts with .theme-dark .input_d266e7:not(.hiddenDiv-2qTqSF)
+    }
+}
+
+// Select
+.theme-dark{
+    .select__0eb48{
+        padding: 3px 8px 3px 12px;
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
+        @include TypeBody;
+        &:hover{
+            border-color: $ControlStrokeColorSecondary;
+        }
+    }
+
+    // Options popout
+    .popout_a6e77f{
+        background: $SolidbackgroundFillColorQuarternary;
+        border: 1px solid $SurfaceStrokeColorFlyout;
+        .option_be8b2e{
+            min-height: 32px;
+            margin: 4px;
+            padding: 8px;
+            @include TypeBody;
+            color: $TextFillColorPrimary;
+            position: relative;
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+                border-radius: 4px;
+            }
+            &[aria-selected=true]{
+                background-color: transparent;
+
+                &::before{
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -8px;
+                    left: 0;
+                    background-color: $AccentBase;
+                    border-radius: 2px;
+                }
+                &:hover{
+                    background-color: $SubtleFillColorSecondary;
+                    border-radius: 4px;
+                }
+                .selectedIcon__4b0ba{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Keybind
+.theme-dark .container__0c807{
+    height: 32px;
+    background-color: $ControlFillColorDefault;
+    border: 1px solid $ControlStrokeColorDefault;
+    border-radius: 4px;
+    .button_afdfd9{
+        min-height: calc(32px - 6px);
+        height: calc(32px - 6px);
+        margin: 2px;
+    }
+}
+
+// Slider
+.slider__22e99{
+    .bar_e58961{
+        height: 3px;
+        background-color: $ControlStrongStrokeColorDefault;
+        border-radius: 2px;
+    }
+    .barFill__30e17{
+        height: 3px;
+        position: absolute;
+        background-color: $AccentBase;
+        border-radius: 2px;
+    }
+    .grabber_d2868c{
+        width: 18px;
+        height: 18px;
+        margin-top: -11px;
+        margin-left: -9px;
+        background-color: $AccentBase;
+        border: 4px solid #454545;
+        border-radius: 50%;
+        box-sizing: border-box;
+        &:hover{
+            width: 18px;
+            height: 18px;
+            border: 3px solid #454545;
+        }
+        &:active{
+            width: 18px;
+            height: 18px;
+            border: 5px solid #454545;
+        }
+    }
+}
+
+// Text formatting toolbar
+// Highlight text in the chat box to open the formatting bar
+.theme-dark .toolbar_c7b525{
+    padding: 4px;
+    background: $AcrylicBackgroundFillColorDefault;
+    backdrop-filter: blur(10px);
+    border: 1px solid $SurfaceStrokeColorFlyout;
+    border-radius: 8px;
+    // Remove arrow
+    &::before{
+        display: none;
+    }
+
+    button{
+        margin-right: 4px;
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+            &.active__05fbc{
+                background-color: $AccentTextFillColorSecondary;
+            }
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        &.active__05fbcF{
+            background-color: $AccentFillColorDefault;
+            .icon__5a617{
+                color: $TextOnAccentFillColorPrimary;
+            }
+        }
+
+        .buttonInner__1dbe5,
+        .icon__5a617{
+            width: 16px;
+            height: 16px;
+        }
+
+    }
+}
+
+// Copy box
+.copyInput_c1c679{
+    height: 42px;
+    margin-bottom: 8px;
+    background-color: $ControlFillColorDefault;
+    border: 1px solid $ControlStrokeColorDefault;
+    border-radius: 4px;
+    .input__770f1{
+        @include TypeBody;
+    }
+}

@@ -1,0 +1,131 @@
+html[lang^="en-"].theme-dark .toolbar__88c63{
+    .iconWrapper_af9215{
+        // Threads
+        &[aria-label="Threads"]::before{
+            content: "\E8C4"; // ShowBcc
+        }
+
+        // Mute channel
+        &[aria-label*="Mute channel"][aria-checked="false"]::before{
+            content: "\EA8F"; // Ringer
+        }
+        &[aria-label*="Mute channel"][aria-checked="true"]::before{
+            content: "\E7ED"; // RingerSilent
+        }
+
+        // Pinned Messages
+        &[aria-label="Pinned messages" i]::before{
+            content: "\E840"; // Pinned
+        }
+
+        // Member list
+        &[aria-label="Hide Member List" i]::before,
+        &[aria-label="Show Member List" i]::before{
+            content: "\E716"; // People
+        }
+
+        // User profile (DM)
+        &[aria-label="Hide User Profile"]::before,
+        &[aria-label="Show User Profile"]::before{
+            content: "\E136"; // Contact Info
+        }
+
+        // Mail
+        &[aria-label="Inbox"]::before{
+            content: "\E715"; // Mail
+        }
+
+        // Threads: Notification Settings
+        &[aria-label="Notification settings" i]::before{
+            content: "\EA8F"; // Ringer
+        }
+
+        // Threads: More
+        &[aria-label="More"]::before{
+            content: "\E712"; // More
+        }
+
+         // Threads: Close
+         &[aria-label="Close"]::before{
+            content: "\E89F"; // More
+        }
+
+        // Update
+        &[aria-label="Update Ready!"]::before{
+            content: "\F83E"; // UpdateRestore
+        }
+        &[aria-label="Update Ready!"]::after{
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 19px;
+            left: 32px;
+            background-color: $Gold;
+
+            border-radius: 4px;
+        }
+
+        // Help
+        &[aria-label="Help"]{
+            display: none;
+        }
+
+        // Home
+        // New group DM
+        &[aria-label="New group DM" i]::before{
+            content: "\E902"; // Group
+        }
+
+        // DM
+        // Start voice call
+        &[aria-label="Start voice call" i]::before{
+            content: "\E717"; // Phone
+        }
+        &[aria-label="Start video call" i]::before{
+            content: "\E8AA"; // VideoChat
+        }
+        &[aria-label="Add friends to DM" i]::before{
+            content: "\E902"; // Group
+        }
+        // Join call
+        &[aria-label="Join Voice Call" i]::before{
+            content: "\E77E"; // IncomingCall
+        }
+
+        // Stage channel
+        &[aria-label="tage Settings" i]::before{
+            content: "\E115"; // Setting
+        }
+    }
+    .eventsButton-25vYOY{
+        // Stage channel
+        &[aria-label="Create & View Events" i]::before{
+            content: "\E163"; // Calendar
+        }
+    }
+    .button_afdfd9{
+        // Call tiles
+        // Invite
+        &[aria-label="Invite"]::before{
+            content: "\E1E2"; // AddFriend
+        }
+        // Focus
+        &[aria-label="Focus"]::before,
+        &[aria-label="Grid"]::before{
+            content: "\ECA5"; // Tiles
+        }
+        // More
+        &[aria-label="More"]::before{
+            content: "\E712"; // More
+        }
+    }
+
+    // Stage channel
+    .button_afdfd9{
+        // Show chat
+        &[aria-label^="Show Chat"]::before{
+            content: "\E8A0"; // OpenPane
+        }
+    }
+}

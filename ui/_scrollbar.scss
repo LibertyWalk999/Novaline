@@ -1,0 +1,29 @@
+// Channels, members, settings nav
+.theme-dark .thin_b1c063{
+    &::-webkit-scrollbar{
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $ControlStrongFillColorDefault;
+    }
+}
+
+// Chat
+.theme-dark .auto_a48086{
+    &::-webkit-scrollbar{
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $ControlStrongFillColorDefault;
+    }
+}
+
+// Giphy/Tenor search popout
+.theme-dark .scrollbarGhostHairline_c9a45f{
+    &::-webkit-scrollbar-thumb{
+        background-color: $ControlStrongFillColorDefault;
+    }
+}

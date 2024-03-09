@@ -1,0 +1,51 @@
+.theme-dark .members__9f47b{
+    background-color: $LayerFillColorDefault;
+
+    // Group header
+    .membersGroup__85843{
+        padding: 20px 8px 0 16px;
+        color: $TextFillColorPrimary;
+        @include TypeBodyStrong;
+        text-transform: none;
+    }
+
+     // Member
+     .container__4f20e{
+        background-color: transparent;
+        color: $TextFillColorPrimary;
+        // Greyscale offline avatars
+        &.offline_c1fd80{
+            .avatar__6337f{
+                filter: grayscale(100%);
+            }
+            &:hover{
+                .avatar__6337f{
+                    filter: grayscale(0%);
+                }
+            }
+        }
+        .layout_bb8e67{
+            border: 1px solid transparent;
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+                border-color: $SubtleFillColorSecondary;
+            }
+        }
+        &[aria-expanded=true] .layout_bb8e67{
+            background-color: $SubtleFillColorSecondary;
+            border-color: $SubtleFillColorSecondary;
+        }
+        // Username
+        .name__16feb{
+            @include TypeBody;
+        }
+        // Activity
+        .activity__3cbac{
+            @include TypeCaption;
+            color: $TextFillColorSecondary;
+            strong{
+                @include TypeCaption;
+            }
+        }
+    }
+}
